@@ -41,7 +41,7 @@ int main(int argc, char* argv[])
     if (argc == 2)
     {
         cout << "\\usage of the program:\\" << endl << " Acess Specifiers " << endl;
-        cout << " "<< endl ;
+        
     }
     
     else
