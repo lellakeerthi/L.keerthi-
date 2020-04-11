@@ -41,6 +41,9 @@ int main(int argc, char* argv[])
     if (argc == 2)
     {
         cout << "\\usage of the program:\\" << endl << " Acess Specifiers " << endl;
+	cout << " private data members are accessed using public << endl ;
+	cout << " protected can be used by public and derived classes << endl ;
+	cout << " public members can be used allo over the class << endl ;
         
     }
     
