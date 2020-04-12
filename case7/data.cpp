@@ -87,11 +87,11 @@ void deleteconfig(set<Notes> &std)
         {
                 n=*it;
                 if(n.getkey()==no)
-                        std.erase(it);
+                std.erase(it);
    }
         for(it=std.begin();it!=std.end();it++)
         outfile.write((char*)&(*it),sizeof(n));
-    outfile.close();
+    	outfile.close();
 }
 /*function name:displayconfig
 return type:void
@@ -171,8 +171,8 @@ int main(int argc,char **argv)
                         displayconfig();
                         break;
                 case '5':
-						exit(0);
-						break;        
+			exit(0);
+			break;        
                 default:
                         return 0;
         }
