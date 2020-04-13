@@ -42,7 +42,7 @@ float Float;
 // checking arguments to display -h
 if (argc==2)  
 	{
-		cout << " usage of parse.exe" <<endl;           
+		cout << " usage of datatype.exe" <<endl;           
 		cout << " argv[0] datatype1, datatype2, datatype3....n" << endl ; 
 
 	}
