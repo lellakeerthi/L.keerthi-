@@ -51,7 +51,7 @@ istream& operator>>(istream &in,Notes &n)
 }
 /*function name:addconfig
 return type:void
-input parameter:set<student> &std
+input parameter:set<notes> &std
 */
 void addconfig(set<Notes>&std)
 {
@@ -73,7 +73,7 @@ void addconfig(set<Notes>&std)
 }
 /*function name:deleteconfig
 return type:void
-input parameter:set<student> &std
+input parameter:set<notes> &std
 */
 void deleteconfig(set<Notes> &std)
 {
@@ -111,7 +111,7 @@ void displayconfig()
 }
 /*function name:serchupdateconfig
 return type:void
-input parameter:set<student> &std
+input parameter:set<notes> &std
 */
 void searchupdateconfig(set<Notes> &std)
 {
@@ -142,7 +142,7 @@ int main(int argc,char **argv)
 {
 	if(argc==2)
 	{
-	cout<<"program.exe"<<endl;
+	cout<<"notes.exe"<<endl;
 	cout<<"this program is used add ,delete,update data to file"<<endl;
 	}
 	else
