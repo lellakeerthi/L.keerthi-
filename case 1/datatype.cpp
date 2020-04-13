@@ -1,6 +1,6 @@
 /*Program: checking the command line arguments.
-filename:parse.cpp
-date:10-04-2020
+filename:datatype.cpp
+date:14-04-2020
 Author:L. keerthi
 */
 #include<iostream>
