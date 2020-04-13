@@ -43,7 +43,7 @@ float Float;
 if (argc==2)  
 	{
 		cout << " usage of datatype.exe" <<endl;           
-		cout << " argv[0] datatype1, datatype2, datatype3....n" << endl ; 
+		cout << argv[0]<<endl<<" datatype1, datatype2, datatype3....datatypen" << endl ; 
 
 	}
 	else if (argc>2)  
