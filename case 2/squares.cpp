@@ -14,14 +14,14 @@ output parameter:int
 
 int SquareSum(int No) // function for square & sum
 {
-	int i= 0, Sum = 0 ;
+	int index = 0, Sum = 0 ;
 	
 	if(No>0 )  
     {
-		for ( i = 0; i <= No; i ++) 
+		for ( index = 0; index <= No; index ++) 
         {
         	// to square and add the squares
-            Sum = (i*i) + Sum; 
+            Sum = ( index * index ) + Sum; 
 
         }
         cout <<"sum :" << Sum ;
@@ -33,7 +33,7 @@ int main(int argc, char* argv[])
     // checking arguments to display -h 
     if (argc == 2) 
     {
-        cout << "usage of square.exe" << endl <<argv[0] << endl << "input: int" ;
+        cout << "usage of " << argv[0] ;
     }
     else
 	{
