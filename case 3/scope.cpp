@@ -45,7 +45,8 @@ return type:void
 void staticClass() 
 { 
     
-    for (int i = 1; i < 5; i++) { 
+    for (int i = 1; i < 5; i++) 
+    { 
   
         // Declaring the static variable  
         static int Stat = 5; 
