@@ -1,8 +1,8 @@
 
 /*Program:program using int*, char [] .
 filename:copy.cpp
-Date:10-04-2020
-Author:.
+Date:16-04-2020
+Author:l.keerthi.
 */
 #include<iostream>
 #include<cstring>
