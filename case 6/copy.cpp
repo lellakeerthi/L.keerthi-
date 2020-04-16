@@ -55,7 +55,7 @@ int main(int argc,char *argv[])
 	else 
 	{
     CopyConstructor c1("Copy",9);
-    //Copy constructor, overloading '=' 
+    //Copy constructor
 	CopyConstructor c2=c1; 
     c1.display();
     c2.display();
