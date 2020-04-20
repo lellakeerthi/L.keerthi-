@@ -8,7 +8,7 @@ Author:l.keerthi
 using namespace std;
 class Rectangle
 { 
-    int iLength;
+	int iLength;
 	int ibreadth;
 	static int iLen;
 	static int iBre;
@@ -17,13 +17,13 @@ public:
 	return type:void
 	input parameter:int ,int
 	*/
-    void calculatearea( int iLength, int ibreadth )
-    {
+    	void calculatearea( int iLength, int ibreadth )
+    	{
                   
-    	int Area;
+    		int Area;
 		Area = ( iLength * ibreadth );
-        cout<< "Area of rectangle:" << Area << endl;
-    }
+        	cout<< "Area of rectangle:" << Area << endl;
+    	}
 	/*function name:calculateperimeter
 	return type:void
 	input parameter:int ,int
@@ -36,7 +36,7 @@ public:
 	}
 };
 //private data member initialization using scope resolution .
-     int Rectangle::iLen = 90;
+    	int Rectangle::iLen = 90;
      int Rectangle::iBre = 80;
      
 int main( int argc, char *argv[] )
