@@ -64,26 +64,30 @@ public:
 	cout<<"IN destructor"<<endl;
 	}
 };
-int main(int argc,char**argv)
+
+int main(int argc, char* argv[])
 {
-	if(argc==2)
+    // checking arguments to display -h 
+    
+	if((argc==2) && (strcmp(argv[1],"-h")==0))
 	{
-	cout<<"programname.exe"<<endl;
-	cout<<"meberfunction and operatoe overloading"<<endl;
+        	cout << "usage of"<< endl <<argv[0] ;
+		cout<<"meberfunction and operatoe overloading"<<endl;
 	}
+	
 	else
 	{
-	int iJ;
-	cout<<"enter value:"<<endl;
-	cin>>iJ;
-	//object declaration for class "Name"
-	Name str1("copy");
-	Name str2=("constructor");
-	Name str3;
-	Name s;
-	str3=str1+str2;
-	s.put_value(&iJ);
-	s.display();
-	str3.display1();
+		int iJ;
+		cout<<"enter value:"<<endl;
+		cin>>iJ;
+		//object declaration for class "Name"
+		Name str1("copy");
+		Name str2=("constructor");
+		Name str3;
+		Name s;
+		str3=str1+str2;
+		s.put_value(&iJ);
+		s.display();
+		str3.display1();
 	}
 }
