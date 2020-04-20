@@ -41,7 +41,7 @@ int main(int argc,char * argv[])
     	//Creating object to class A
     	Rectangle ob;
     	ob.Var() ;
-		Rectangle ob1(4, 5);
+	Rectangle ob1(4, 5);
 		
 	}
 }
