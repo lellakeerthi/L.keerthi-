@@ -79,19 +79,18 @@ class test
  
 int main(int argc,char* argv[])
 {
-	if(argc==2)
-    {
-     	if(strcmp(argv[1],"-h")==0)
-    	{
-			cout<<"Enter given Inputs"<<endl;
-        }
-    }
+	if((argc==2) && (strcmp(argv[1],"-h")==0))	 				
+	{
+    	cout<<" usage of"<< argv[0] << endl;
+	}
+
+	
 	else
-    {
+    	{
 		int ino;
 		char cStr[20];
         
-		test* ob=new test();
+	test* ob=new test();
         ob->display();
         
         test* ob1=new test(100 ,"constructor");
