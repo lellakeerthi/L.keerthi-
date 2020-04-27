@@ -75,6 +75,9 @@ float Float;
 				}
 			}
 	}
-
+	else 
+	{
+		cout<<"no arguments are given" << endl << "-h for usage" ;
+	}
 }
 
