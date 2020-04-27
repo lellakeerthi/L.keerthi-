@@ -57,7 +57,7 @@ float Float;
 				// converting ascii to float
 				Float = atof(argv[Pos]); 
 		
-				if(Int == 0) 
+				if(Int >= 0) 
 					{
 						// comparing string length for char
 						if(strlen(argv[Pos])==1) 
