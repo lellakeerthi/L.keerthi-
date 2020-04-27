@@ -47,7 +47,7 @@ float Float;
 		cout << argv[0] << endl << "datatype1, datatype2, datatype3....n" << endl ; 
 		
 	}
-	else if (argc==2)  
+	else  
 	{
 		//looping for arguments
 		for(Pos=1; Pos<argc; Pos++)  
@@ -75,9 +75,6 @@ float Float;
 				}
 			}
 	}
-	else 
-	{
-		cout<<"no arguments are given" << endl << "-h for usage" ;
-	}
+
 }
 
