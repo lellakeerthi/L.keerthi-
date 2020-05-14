@@ -97,7 +97,7 @@ void code::decrypt(char* filename, char* key)
 	//open a file to perform write operation using file object
 	ofstream outfile ;
 	outfile.open("decrypt.txt");
-    //checking whether the file is present	
+        //checking whether the file is present	
 	if(!file)
 	{
 		cout<<" file not found"<< endl ;
@@ -109,17 +109,18 @@ void code::decrypt(char* filename, char* key)
     }
 	if (file.is_open())  
    	{
+		// getting key from the encrypted file
 		getline(file,Skey ) ;
 				
 		for(int indx=0; key[indx]!= '\0'; indx++)
  		{
  			Key += key[indx]+5;
 		}
-		
+	// comparing key in encrypted file and given key	
    	if((Skey.compare(Key))==0)
    	{
    	    		
-	// to reverse the content of encrypted file
+	// to reverse the content of encrypted file if key matches
 	while(!file.eof())
 	{
 	 	file.get( word );
