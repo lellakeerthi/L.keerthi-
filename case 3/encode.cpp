@@ -3,13 +3,18 @@ Filename:encode.cpp
 Author:l.keerthi
 date:09-5-2020
 */	
+
+#include<iostream>
+#include<fstream>
+#include<string.h>
 #include"encode.h"
+using namespace std ;
   
 code::code()
 {
-	cout<<"enter alpha numeric character" ;
-	cin>>alpha ;
-
+	word = NULL ;
+	strcpy(str,"\0") ;
+	count=0 ;
 }
 /*Function Name :encrypt
   Parameters    :char*
@@ -18,10 +23,11 @@ code::code()
 
 void code::encrypt(char* filename, char* key)	
 {
-	char word;
-	int count=0;
-	char str[100] ;
+
 	string Key ;
+	
+	cout<<"enter alpha numeric character" ;
+	cin>>alpha ;
 			
 	//open a file to perform write operation using file object
 	ofstream outfile ;
@@ -37,7 +43,7 @@ void code::encrypt(char* filename, char* key)
 	}
 	if (!outfile)
 	{
-        cout << "decrypt file not found" << endl;
+        cout << "encrypt file not found" << endl;
     }    				
  			
 	for(int indx=0; key[indx]!= '\0'; indx++)
@@ -79,17 +85,17 @@ void code::encrypt(char* filename, char* key)
 	file.close() ;
 }
 /*Function Name :decrypt
-  Parameters    :char*, char*
+  Parameters    :char*
   Return Type   :no return type
-  Usage         :to check for the key & decrypt reverse data of encrypt file */		
+  Usage         :to decrypt reverse data of encrypt file */		
 void code::decrypt(char* filename, char* key)
 {
 			
-	char word;
-	int count=0;
-	char str[50];
 	string line ;
 	string Skey, Key ;
+	
+	cout<<"enter alpha numeric character" ;
+	cin>>alpha ;
 
 	//open a file to perform read operation using file object
 	ifstream file ;
@@ -97,7 +103,7 @@ void code::decrypt(char* filename, char* key)
 	//open a file to perform write operation using file object
 	ofstream outfile ;
 	outfile.open("decrypt.txt");
-        //checking whether the file is present	
+    //checking whether the file is present	
 	if(!file)
 	{
 		cout<<" file not found"<< endl ;
@@ -109,18 +115,17 @@ void code::decrypt(char* filename, char* key)
     }
 	if (file.is_open())  
    	{
-		// getting key from the encrypted file
 		getline(file,Skey ) ;
 				
 		for(int indx=0; key[indx]!= '\0'; indx++)
  		{
  			Key += key[indx]+5;
 		}
-	// comparing key in encrypted file and given key	
+		
    	if((Skey.compare(Key))==0)
    	{
    	    		
-	// to reverse the content of encrypted file if key matches
+	// to reverse the content of encrypted file
 	while(!file.eof())
 	{
 	 	file.get( word );
