@@ -11,11 +11,11 @@ code::code()
 	cin>>alpha ;
 
 }
-
 /*Function Name :encrypt
-  Parameters    :char*,char*
+  Parameters    :char*
   Return Type   :no return type
-  Usage         :to reverse data of input file */
+  Usage         :to reverse data of input file */		
+
 void code::encrypt(char* filename, char* key)	
 {
 	char word;
@@ -79,16 +79,17 @@ void code::encrypt(char* filename, char* key)
 	file.close() ;
 }
 /*Function Name :decrypt
-  Parameters    :char*
+  Parameters    :char*, char*
   Return Type   :no return type
-  Usage         :to decrypt reverse data of encrypt file */		
-void code::decrypt(char* filename)
+  Usage         :to check for the key & decrypt reverse data of encrypt file */		
+void code::decrypt(char* filename, char* key)
 {
 			
 	char word;
 	int count=0;
 	char str[50];
 	string line ;
+	string Skey, Key ;
 
 	//open a file to perform read operation using file object
 	ifstream file ;
@@ -105,8 +106,19 @@ void code::decrypt(char* filename)
 	if (!outfile)
 	{
         cout << "decrypt file not found" << endl;
-    }    		
-	getline(file, line) ;
+    }
+	if (file.is_open())  
+   	{
+		getline(file,Skey ) ;
+				
+		for(int indx=0; key[indx]!= '\0'; indx++)
+ 		{
+ 			Key += key[indx]+5;
+		}
+		
+   	if((Skey.compare(Key))==0)
+   	{
+   	    		
 	// to reverse the content of encrypted file
 	while(!file.eof())
 	{
@@ -135,48 +147,16 @@ void code::decrypt(char* filename)
 		else
 		   	str[count++]=word;
 	}
-
-    file.close();
-    outfile.close();
-
-}
-/*Function NameSecret_key
-  Parameters    :char*, char*
-  Return Type   :no return type
-  Usage         :to compare the secret key & to display decoded data */
-void code::Secret_key(char* filename, char* key) 
-{
-	string Skey, Key ;
-         
-  	ifstream file ;
-  	//open a file to perform read operation using file object
-  	file.open("encrypt.txt");
-	
-	if(!file)
-	{
-		cout<<" file not found"<< endl ;
 	}
-
-	//checking whether the file is open   
-   	if (file.is_open())  
-   	{
-		getline(file,Skey ) ;
-				
-		for(int indx=0; key[indx]!= '\0'; indx++)
- 		{
- 			Key += key[indx]+5;
-		}
-	}
-   	if((Skey.compare(Key))==0)
-   	{
-   		decrypt(filename) ;
-   	}
-   	else
+	else
    	{
    		cout<<"key not matched" ;
    	}   
-  			
-   	file.close(); 
+	}
+	
+    file.close();
+    outfile.close();
+
 }
 
 int main(int argc,char *argv[])  
@@ -207,11 +187,11 @@ int main(int argc,char *argv[])
 			{
 				if ((strcmp(argv[2],"-f")==0 ) )
 					
-					obj.Secret_key(argv[3], argv[5]) ;
+					obj.decrypt(argv[3], argv[5]) ;
 				
 				else if((strcmp(argv[2], "-k")==0))
 				
-					obj.Secret_key(argv[5], argv[3]) ;		
+					obj.decrypt(argv[5], argv[3]) ;		
 			}
 	}
 	else
@@ -220,4 +200,3 @@ int main(int argc,char *argv[])
 	}
 return 0 ;	
 }
-
