@@ -16,8 +16,8 @@ class code
 	public:
 		code() ;	
 		void encrypt(char* filename, char* key) ;
-		void decrypt(char* filename) ;
-		void Secret_key(char* filename, char* key) ;
+		void decrypt(char* filename, char* key) ;
+
 };
 #endif 
 
