@@ -11,6 +11,11 @@ code::code()
 	cin>>alpha ;
 
 }
+
+/*Function Name :encrypt
+  Parameters    :char*,char*
+  Return Type   :no return type
+  Usage         :to reverse data of input file */
 void code::encrypt(char* filename, char* key)	
 {
 	char word;
@@ -135,7 +140,7 @@ void code::decrypt(char* filename)
     outfile.close();
 
 }
-/*Function Name :encrypt
+/*Function NameSecret_key
   Parameters    :char*, char*
   Return Type   :no return type
   Usage         :to compare the secret key & to display decoded data */
