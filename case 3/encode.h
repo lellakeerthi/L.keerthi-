@@ -11,6 +11,7 @@ class encode
 		int count ;
 		std::string line ;
 		std::string Skey, Key ;
+	//public members
 	public:
 		encode() ;	
 		~encode() ;
