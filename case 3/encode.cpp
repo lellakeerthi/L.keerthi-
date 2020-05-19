@@ -3,7 +3,7 @@
 #include <string.h>
 #include"encode.h"
 using namespace std ;
-
+//constructor
 encode::encode()
 {
 	strcpy(String,"\0") ;
@@ -11,8 +11,8 @@ encode::encode()
 }
 
 /*Function Name :encrypt
-  Parameters    :char*
-  Return Type   :no return type
+  Parameters    :char*, char* 
+  Return Type   :int
   Usage         :to reverse data of input file */	
 int encode::encrypt(char* filename, char* key)	
 {
@@ -71,8 +71,8 @@ int encode::encrypt(char* filename, char* key)
 	return 1 ;
 }
 /*Function Name :decrypt
-  Parameters    :char*
-  Return Type   :no return type
+  Parameters    :char*, char*
+  Return Type   :int
   Usage         :to decrypt reverse data of encrypt file */		
 int encode::decrypt(char* filename, char* key)
 {
