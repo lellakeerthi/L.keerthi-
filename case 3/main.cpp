@@ -13,7 +13,7 @@ int main(int argc,char *argv[])
 {
 	int var ;
 	encode obj ;
-	//int a = result ;
+	
 	// checking arguments to display -h
     if((argc==2) && (strcmp(argv[1],"-h")==0))
 	{
@@ -55,7 +55,7 @@ int main(int argc,char *argv[])
 			// conditions for decryption		
 			else if (strcmp(argv[1],"-d")==0)
 			{
-				//if ()
+				
 				if ((strcmp(argv[2],"-f")==0 ) )
 				{	
 					var=obj.decrypt(argv[3], argv[5]) ;
