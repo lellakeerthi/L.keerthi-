@@ -13,9 +13,8 @@ int main(int argc,char *argv[])
 {
 	int var ;
 	encode obj ;
-	//int a = result ;
 	// checking arguments to display -h
-    if((argc==2) && (strcmp(argv[1],"-h")==0))
+    	if((argc==2) && (strcmp(argv[1],"-h")==0))
 	{
 		cout << " usage of"<< argv[0] <<endl;           
 		cout << "-f filename -e encryption / -d decryption -k key " << endl ; 		
