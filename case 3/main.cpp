@@ -82,10 +82,6 @@ int main(int argc,char *argv[])
 				}
 			}
 	}
-	else if(argc<6)
-	{
-		cout<<"invalid number of arguments" ;
-	}	
 	else
 	{
 		cout<< " use -h for usage " ;
